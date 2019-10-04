@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, NavLink } from 'react-router-dom';
 
 import Projects from './components/Projects';
+import Project from './components/Project';
 import Home from './components/Home';
 import Form from './components/Form';
 
@@ -24,7 +25,7 @@ function App(props) {
 
       <Route exact path='/' component={Home} />
       <Route path='/project-form' render={() => <Form {...props} />} />
-      <Route path='/projects' render={() => <Projects {...props} />} />
+      <Route path='/projects' render={props => <Projects {...props} />} />
     </div>
   );
 }
